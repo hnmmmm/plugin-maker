@@ -79,6 +79,25 @@ npm run dist       # Windows 설치 파일 만들기 → dist\PluginMaker-Setup-
 
 쓰는 라이브러리: [Blockly](https://github.com/google/blockly) (Apache-2.0), [Electron](https://github.com/electron/electron) (MIT).
 
+## Code signing policy (코드 서명 정책)
+
+Free code signing provided by [SignPath.io](https://about.signpath.io/), certificate by [SignPath Foundation](https://signpath.org/).
+
+설치 파일은 이 저장소의 소스 코드로 [GitHub Actions](../../actions/workflows/build.yml) 에서 자동으로 만들어지고, 서명 전에 승인자가 한 번 더 확인합니다.
+
+- Committers and reviewers: [hnmmmm](https://github.com/hnmmmm)
+- Approvers: [hnmmmm](https://github.com/hnmmmm)
+
+### Privacy policy (개인정보)
+
+This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it.
+
+이 프로그램은 사용자 정보를 어디에도 보내지 않습니다. 사용자가 원할 때만 아래 공식 서버에서 필요한 파일을 받습니다.
+
+- Mojang (`piston-meta.mojang.com`, `resources.download.minecraft.net`): 고른 마크 버전의 아이템·블록 그림과 이름
+- Eclipse Adoptium (`api.adoptium.net`), Apache (`archive.apache.org`): 플러그인을 만들 때 필요한 자바(JDK)와 Maven
+- PaperMC, SpigotMC, Maven Central: 플러그인을 만들 때 필요한 서버 라이브러리
+
 ## 알림
 
 이 프로그램은 Mojang Studios · Microsoft 와 관계없는 비공식 도구입니다. "Minecraft" 는 Mojang Studios 의 상표입니다.
