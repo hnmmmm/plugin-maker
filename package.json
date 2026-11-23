@@ -1,0 +1,85 @@
+{
+  "name": "plugin-maker",
+  "productName": "PluginMaker",
+  "version": "1.0.0",
+  "description": "블록을 쌓아서 마인크래프트 서버 플러그인을 만드는 프로그램",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64",
+    "dist:dir": "electron-builder --win dir --x64"
+  },
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0"
+  },
+  "dependencies": {
+    "blockly": "12.5.1"
+  },
+  "build": {
+    "appId": "com.pluginmaker.app",
+    "productName": "PluginMaker",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "style.css",
+      "builder.js",
+      "check.js",
+      "tools.js",
+      "mcassets.js",
+      "mccatalog.js",
+      "slots.js",
+      "ui.js",
+      "defs.js",
+      "gen.js",
+      "templates.js",
+      "pixel.js",
+      "richtext.js",
+      "picker.js",
+      "designer.js",
+      "workspace.js",
+      "pack.js",
+      "start.js",
+      "easter.js",
+      "package.json",
+      "LICENSE"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "executableName": "PluginMaker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "플러그인 메이커",
+      "artifactName": "PluginMaker-Setup-${version}.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.png",
+      "category": "public.app-category.developer-tools"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png",
+      "category": "Development"
+    }
+  }
+}
